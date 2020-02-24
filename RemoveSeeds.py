@@ -20,9 +20,10 @@ for name in names:
 		print ("You are removing \n"'%s' % (name))
 		newname = name.split('\n')[0] ### make newname = the header with all sequence inf removed since its after the line break
 		newname = name.split(">")[1]### make newname = everything after the >
-		while newname.count("'") != 0: ### while there are strings in newname that have occurrences of "'" more than zero
-			newname = newname.replace("'", "") ### replace the apostrophe with nothing
-			delete.append(newname.strip()) ### add newname with whitespace removed to the list todelete
+		delete.append(newname)
+		#while newname.count("'") != 0: ### while there are strings in newname that have occurrences of "'" more than zero
+			#newname = newname.replace("'", "") ### replace the apostrophe with nothing
+			#delete.append(newname.strip()) ### add newname with whitespace removed to the list todelete
 
 seqs = line.split(">")[1:]
 seq_d = {}
